@@ -1,0 +1,13 @@
+***For crm_cust_info TABLE***
+-- IN cst_id we have duplicates and null.// checking cst_id
+select
+cst_id,count(*) from bronze.crm_cust_info
+group by cst_id having count(cst_id)>1 or cst_id is null; 
+
+---checking firstname and last name
+select cst_firstname from bronze.crm_cust_info where cst_firstname!=trim(cst_firstname);
+
+---cleaning marital status giving full name to the column.
+select cst_marital_status from bronze.crm_cust_info where cst_marital_status!=trim(cst_marital_status);
+
+
