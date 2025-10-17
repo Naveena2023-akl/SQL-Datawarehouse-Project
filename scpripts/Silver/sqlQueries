@@ -62,7 +62,11 @@ INSERT INTO silver.erp_cust_az12 (
 			gen
 		)
 
-select replace(cid,'NAS','')as cid ,
+select 
+CASE
+  when cid LIKE 'NAS%' THEN SUBSTRING(cid,4,len(cid))
+  else CID
+  END CID,
 case
 when bdate > GETDATE() or bdate <'1925-10-17' then Null
 else bdate
