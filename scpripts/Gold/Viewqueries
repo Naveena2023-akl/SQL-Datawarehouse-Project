@@ -23,6 +23,9 @@ LEFT JOIN silver.erp_loc_a101 la
 
 select * from   gold.dim_customers;
 
+
+
+
 --Dimension products
 
 CREATE VIEW gold.dim_products AS
@@ -44,6 +47,10 @@ LEFT JOIN silver.erp_px_cat_g1v2 pc
 WHERE pn.prd_end_dt IS NULL; -- Filter out all historical data
 
 select * from gold.dim_products;
+
+
+
+
 
 --FACT Table
 
