@@ -1,7 +1,6 @@
 # SQL-Datawarehouse-Project
 Building a datawarehouse
 
-Github Link:https://github.com/Naveena2023-akl/SQL-Datawarehouse-Project/tree/main
 
 🌐 Overview
 
